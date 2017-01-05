@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var port = 3000;
+var port = 3005;
 
 app.set('port',port);
     app.use('/', express.static(path.join(__dirname, 'lib')));
