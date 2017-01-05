@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+</script>
+</head>
+<body>
+
+<form id="myform">
+  First name: <input type="text" name="firstName" value="Mickey"><br>
+  <input type="submit" value="Submit">
+</form>
+<h1>Server 1</h1>
+<span class="input-group-btn">
+  <button type="button" class="btn btn-primary">Go!</button>
+</span> 
+
+</body>
+<script src="./jquery/jquery.min.js"></script>
+<script>
+    $(function () {
+      $('button').on('click',function(e){
+          e.preventDefault;
+            $.ajax({
+                type:"get",
+                url: "/",
+                data: $("form").serialize(),
+                })
+            .done(function() {
+             console.log ('data was send to server');
+            });
+        });
+    });
+</script>
+</html>
